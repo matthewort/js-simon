@@ -9,17 +9,30 @@
 // * Pensate bene ai tempi di esecuzione per non perdervi e quindi quando una cosa deve essere eseguita e quindi dove va messa logicamente.
 
 
-
+// variabili dei numeri esposti
 var num1 = (Math.floor(Math.random() * 9));
 var num2 = (Math.floor(Math.random() * 9));
 var num3 = (Math.floor(Math.random() * 9));
 var num4 = (Math.floor(Math.random() * 9));
 var num5 = (Math.floor(Math.random() * 9));
 
+// alert espone 5 numeri casuali diversi
 alert(" " + num1 + " " + num2 + " " + num3 + " " + num4 + " " + num5);
 
+// dopo 30 secondi l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente.
+setTimeout(myFunction, 400);
+
+function myFunction() {
+  for (var i = 0; i < 5; i++) {
+    var richiesta = prompt("Inserisci i numeri");
+    console.log(richiesta);
+  }
+  alert("you remember: " + richiesta); // ???
+}
 
 
+
+// Una volta inseriti i 5 numeri, il software dice quanti e quali numeri sono stati ricordati
 
 
 // var count = 10;

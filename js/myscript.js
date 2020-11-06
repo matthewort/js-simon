@@ -8,38 +8,31 @@
 // * Individuate gli elementi di cui avete bisogno per realizzae il programma.
 // * Pensate bene ai tempi di esecuzione per non perdervi e quindi quando una cosa deve essere eseguita e quindi dove va messa logicamente.
 
+  var arrayNumeriRandom = [];
+  var numeriCheVoglioGenerare = 5;//Voglio generare numeri random unici dentro l'array..
+  //Sappiamo quando finisce il ciclo? non esattamente perchè con i numeri random posso metterci N giri prima di ottenere il risultato
+  //Per questo motivo opterò per un while //Finchè gli elementi dentro il mio array non corrispondono ai numeri che voglio generare esegui questo codice
+  while(arrayNumeriRandom.length < numeriCheVoglioGenerare) {
+      var numeroRandom = Math.floor(Math.random() * 100); //genero un numero da 0 a 99;    //Prima di inserirlo nell'array mi chiedo: questo numero esiste già nel mio array?     //Se non esiste nel mio array lo inserisco, altrimenti ignoro e riprovo
+      if(!arrayNumeriRandom.includes(numeroRandom)) {
+          arrayNumeriRandom.push(numeroRandom)
+      }
+  }//Una volta finito il mio ciclo avrò il mio array di numeri unici
+  console.log(arrayNumeriRandom)
+  alert(arrayNumeriRandom);
 
-var arrayNumeriRandom = [];
-var numeriCheVoglioGenerare = 10;//Voglio generare numeri random unici dentro l'array..
-//Sappiamo quando finisce il ciclo? non esattamente perchè con i numeri random posso metterci N giri prima di ottenere il risultato
-//Per questo motivo opterò per un while //Finchè gli elementi dentro il mio array non corrispondono ai numeri che voglio generare esegui questo codice
-while(arrayNumeriRandom.length < numeriCheVoglioGenerare) {
-    var numeroRandom = Math.floor(Math.random() * 100); //genero un numero da 0 a 99;    //Prima di inserirlo nell'array mi chiedo: questo numero esiste già nel mio array?     //Se non esiste nel mio array lo inserisco, altrimenti ignoro e riprovo
-    if(!arrayNumeriRandom.includes(numeroRandom)) {
-        arrayNumeriRandom.push(numeroRandom)
+
+  setTimeout(myFunction, 400);function myFunction() {
+  // variabile array vuota che tiene tutti i tuoi numeri inseriti
+  var arrayNumerinseriti = [];  // inizio del ciclo e richiesta del numero
+  while (arrayNumerinseriti.length < numeriCheVoglioGenerare) {
+    var richiesta = prompt("Inserisci i numeri");
+    // se il numero non è presente nell'array lo inserisci nell'array altrimenti lo richiedi
+    if(!arrayNumerinseriti.includes(richiesta)) {
+        arrayNumerinseriti.push(richiesta);
+    } else {
+      richiesta;
     }
-}//Una volta finito il mio ciclo avrò il mio array di numeri unici
-console.log(arrayNumeriRandom)
-
-
-
-
-
-
-
-
-
-// Una volta inseriti i 5 numeri, il software dice quanti e quali numeri sono stati ricordati
-
-
-// var count = 10;
-//
-// function countdown() {
-//   if(count > 0) {
-//   console.log(count);
-//   count--;
-// } else {
-//   console.log("Buon anno");
-//   clearInterval(mioInterval);
-// }
-// }
+  } // parentesi chiusa ciclo
+ console.log(arrayNumerinseriti);
+} // parentesi chiusa funzione

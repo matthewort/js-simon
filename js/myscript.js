@@ -18,20 +18,20 @@
           arrayNumeriRandom.push(numeroRandom)
       }
   }//Una volta finito il mio ciclo avrò il mio array di numeri unici
-  console.log(arrayNumeriRandom)
+  // console.log(arrayNumeriRandom)
   alert(arrayNumeriRandom);
 
 
-  setTimeout(myFunction, 400);function myFunction() {
+  setTimeout(myFunction, 30000);function myFunction() {
   // variabile array vuota che tiene tutti i tuoi numeri inseriti
   var arrayNumerinseriti = [];  // inizio del ciclo e richiesta del numero
   while (arrayNumerinseriti.length < numeriCheVoglioGenerare) {
-    var richiesta = prompt("Inserisci i numeri");
+    var richiesta = prompt("Simon says...");
     // se il numero non è presente nell'array lo inserisci nell'array altrimenti lo richiedi
     if(!arrayNumerinseriti.includes(richiesta)) {
         arrayNumerinseriti.push(richiesta);
     } else {
-      richiesta;
+      richiesta = prompt("Sbagliato! Inserisci un altro numero");
     }
   } // parentesi chiusa ciclo
  console.log(arrayNumerinseriti);

@@ -9,26 +9,23 @@
 // * Pensate bene ai tempi di esecuzione per non perdervi e quindi quando una cosa deve essere eseguita e quindi dove va messa logicamente.
 
 
-// variabili dei numeri esposti
-var num1 = (Math.floor(Math.random() * 9));
-var num2 = (Math.floor(Math.random() * 9));
-var num3 = (Math.floor(Math.random() * 9));
-var num4 = (Math.floor(Math.random() * 9));
-var num5 = (Math.floor(Math.random() * 9));
+var arrayNumeriRandom = [];
+var numeriCheVoglioGenerare = 10;//Voglio generare numeri random unici dentro l'array..
+//Sappiamo quando finisce il ciclo? non esattamente perchè con i numeri random posso metterci N giri prima di ottenere il risultato
+//Per questo motivo opterò per un while //Finchè gli elementi dentro il mio array non corrispondono ai numeri che voglio generare esegui questo codice
+while(arrayNumeriRandom.length < numeriCheVoglioGenerare) {
+    var numeroRandom = Math.floor(Math.random() * 100); //genero un numero da 0 a 99;    //Prima di inserirlo nell'array mi chiedo: questo numero esiste già nel mio array?     //Se non esiste nel mio array lo inserisco, altrimenti ignoro e riprovo
+    if(!arrayNumeriRandom.includes(numeroRandom)) {
+        arrayNumeriRandom.push(numeroRandom)
+    }
+}//Una volta finito il mio ciclo avrò il mio array di numeri unici
+console.log(arrayNumeriRandom)
 
-// alert espone 5 numeri casuali diversi
-alert(" " + num1 + " " + num2 + " " + num3 + " " + num4 + " " + num5);
 
-// dopo 30 secondi l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente.
-setTimeout(myFunction, 400);
 
-function myFunction() {
-  for (var i = 0; i < 5; i++) {
-    var richiesta = prompt("Inserisci i numeri");
-    console.log(richiesta);
-  }
-  alert("you remember: " + richiesta); // ???
-}
+
+
+
 
 
 
